@@ -3,10 +3,7 @@ package java_8.stram_questions.HardLevel;
 import com.sun.source.tree.NewArrayTree;
 
 import java.nio.charset.CharsetEncoder;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 public class MostCommonFirstLetter {
@@ -37,5 +34,16 @@ public class MostCommonFirstLetter {
                         .entrySet().stream()
                                 .max(Map.Entry.comparingByValue());
         System.out.println(max);
+
+       Map<Character, Long> map3 = employee.stream().map(e->e.getName().charAt(0))
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+       System.out.println(map3);
+
+       Optional<Map.Entry<Character, Long>> count  =map3.entrySet().stream().max(Map.Entry.comparingByValue());
+       System.out.println(count);
+
+       employee.stream().map(e -> e.getName().charAt(0)).collect(Collectors.groupingBy(Function.identity()
+               ,Collectors.counting()));
+       map3.entrySet().stream().max(Map.Entry.comparingByValue());
     }
 }
