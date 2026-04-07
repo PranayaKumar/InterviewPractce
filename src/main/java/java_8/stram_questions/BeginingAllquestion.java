@@ -100,8 +100,10 @@ public class BeginingAllquestion {
         System.out.println(listlist);
 
 
-        Optional<Integer> second =numbers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst();
+            Optional<Integer> second =numbers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst();
         System.out.println(second.get());
+
+        List<Integer> list5 = list1.stream().sorted().toList();
 
 
 

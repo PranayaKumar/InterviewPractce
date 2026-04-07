@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class RemoveSpace {
     public static void main(String[] args) {
+
         StringBuilder sb = new StringBuilder();
        Scanner sc = new Scanner(System.in);
        System.out.println("Enter a String");

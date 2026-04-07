@@ -14,6 +14,8 @@ public class DupliacteElemetWithCount {
                 .filter(x -> Collections.frequency(names, x)>1)
                 .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 
+
+
         System.out.println(stringcount);
     }
 }

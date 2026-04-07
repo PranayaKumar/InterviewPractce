@@ -1,6 +1,7 @@
 package java_8.stram_questions.intermediate;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class SortBySalary {
     public static void main(String[] args) {
@@ -25,5 +26,49 @@ public class SortBySalary {
 
      Optional<Employee> thirdHighest  =list1.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).skip(2).findFirst();
      System.out.println(thirdHighest.get());
+
+     Optional<Employee> firstHighest =list1.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).findFirst();
+
+     Optional<Employee> firndfirst =list1.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).findFirst();
+     list1.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).skip(1).findFirst();
+
+
+     Optional<Employee> findfirst2 =list1.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).skip(1).findFirst();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     list1.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).skip(2).findFirst();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Optional<Employee> SortedList =list1.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).findFirst();
+     System.out.println("Second_Highest_Salary"+SortedList);
     }
 }

@@ -26,7 +26,7 @@ public class Maptest {
         }
         Set <Map.Entry<Integer, String>> entries = map.entrySet();
         for(Map.Entry<Integer,String>entry :entries){
-            entry.setValue(entry.getValue().toUpperCase());
+//           entry.setValue(entry.getKey(), entry.getValue().toUpperCase());
         }
          System.out.println(map);
 

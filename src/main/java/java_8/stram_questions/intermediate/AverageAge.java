@@ -3,6 +3,7 @@ package java_8.stram_questions.intermediate;
 import java.time.Period;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class AverageAge {
     public static void main(String[] args) {
@@ -15,6 +16,29 @@ public class AverageAge {
 
       Double average  =  person.stream().mapToInt(Person::getAge).average().orElse(0.0);
       System.out.println(average);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Double test1 =person.stream().mapToDouble(Person::getAge).average().getAsDouble();
+System.out.println(test1);
+
+
 
     }
 }

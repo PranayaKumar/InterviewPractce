@@ -11,6 +11,7 @@ public class GroupBylenght {
         List<String> words = Arrays.asList("apple", "banana","bat","cat", "dog","goat");
         // based on their size
         Map<Integer, List<String>> output  = words.stream().collect(Collectors.groupingBy(String::length));
+       Map<Integer,List<String>> test1 =  words.stream().collect(Collectors.groupingBy(String::length));
         System.out.println(output);
 
     }

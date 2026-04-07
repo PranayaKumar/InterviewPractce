@@ -19,9 +19,9 @@ public class GroupByDepartmet {
                         Collectors.averagingDouble(Employee::getSalary)));
        System.out.println(map1);
 
-   Map<String, Double> map2 =  employee1.stream()
-           .collect(Collectors.groupingBy(
-            Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
+
+        Map<String,Double> map2  =employee1.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
+        System.out.println(map2);
 
     }
 }
